@@ -1,38 +1,22 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
 import {combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import * as reducers from '../reducers';
 
-const reducer = combineReducers(reducers);
 
-const store = createStore(reducer);
+export default class AppLoader extends Component{
 
-function mapStateToProps(){
-
-
-}
-
-function mapDispatchToProps(){
-
-
-}
-
-export default class App extends Component{
-
+	constructor(props){
+		super(props);
+	}
 
 	render(){
 		return (
 		<div>
-			<Provider store={store}>
-				<RegForm /> 
-			</Provider>
+			Hi
 		</div>
 		);
-
 	}
-
-
 }
 
 

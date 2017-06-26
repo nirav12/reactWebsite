@@ -42,19 +42,30 @@ module.exports = {
 
     module: {
 	    loaders: [
-	      {
-	        test: /.jsx?$/,
-	        loader: 'babel-loader',
-	        exclude: /node_modules/,
-	        query: {
-	          presets: ['es2015', 'react']
-	        }
-	      },   
-	      {
-	        exclude: /(node_modules|bower_components)/,
-	        test: /\.js$/,
-	        loader: 'babel-loader'
-	      }
+			{
+				test: /.jsx?$/,
+				loader: 'babel-loader',
+				exclude: /node_modules/,
+				query: {
+				  presets: ['es2015', 'react']
+				}
+			}, {
+				exclude: /(node_modules|bower_components)/,
+				test: /\.js$/,
+				loader: 'babel-loader'
+			},{
+				 test: /\.css$/, 
+				 loader: "style-loader!css-loader" 
+			},{ 
+				test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/, 
+				loader: 'url-loader?limit=100000' 
+			},{
+		        test: /\.json$/,
+		        loader: "json-loader"
+		    },{
+		        test: /\.(eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+		        loader: "file-loader"
+		    }
 	    ]
   	},
 	plugins: [

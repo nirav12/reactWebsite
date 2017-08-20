@@ -12,6 +12,7 @@ function mapStateToProps(state) {
 
 }
 
+
 const mapDispatchToProps = {
 	addUser
 };

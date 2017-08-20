@@ -2,12 +2,12 @@ import React from 'react';
 import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
 import {createStore, applyMiddleware, compose} from 'redux';
-import allReducers from '../reducers';
+import allReducers from '../reducers/index';
 import { hashHistory } from 'react-router';
 
 const logger = createLogger({
-	predicate: (getState,action) => process.env.NODE_ENV === 'development',
-	collapsed: true,
+		predicate: (getState,action) => process.env.NODE_ENV === 'development',
+		collapsed: true,
   	level: 'info',
   	actionTransformer(action) {
 	    if (!action.status || !action.type) {

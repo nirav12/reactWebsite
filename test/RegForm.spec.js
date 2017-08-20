@@ -35,7 +35,7 @@ describe("<RegFormComponent />", function (){
 	});
 
 	it('+++ check Prop matches with initialState', function(){
-		expect(container.prop('name').toBe(initialState.name))
+		expect(container.prop('name').to.Equal(initialState.name))
 	});
 
 });

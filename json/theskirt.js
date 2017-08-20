@@ -75,5 +75,6 @@ export let menuItems = [
     { "id": 3, "order": 2, "name": "Themes" },
     { "id": 4, "order": 3, "name": "Contact", "url": "/contact.html" },
     { "id": 5, "order": 0, "name": "Jeans", "parent_id": 3, "url": "/themes/jeans.html" },
-    { "id": 6, "order": 1, "name": "Pink", "parent_id": 3, "url": "/themes/pink.html" }
+    { "id": 6, "order": 1, "name": "Pink", "parent_id": 3, "url": "/themes/pink.html" },
+    { "id": 7, "order": 1, "name": "RegForm", "url": "/themes/pink.html" }
 ];

@@ -1,8 +1,11 @@
 import {combineReducers} from 'redux';
-import RegFormReducers from './RegFormReducers';
+import {addUser,rowData,userHasErrored,userIsLoading} from './RegFormReducers';
 
 const allReducers = combineReducers({
-	RegFormReducers
+	addUser,
+	rowData,
+	userHasErrored,
+	userIsLoading
 })
 
 export default allReducers

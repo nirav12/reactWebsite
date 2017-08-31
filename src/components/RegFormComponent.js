@@ -6,6 +6,7 @@ import {addUser} from "../actions/RegFormAction";
 import PropTypes from "prop-types";
 import validator from "validator";
 import isEmpty from "lodash/isEmpty";
+import classnames from "classnames";
 import "../assets/css/signupform.css";
 
 function mapStateToProps(state) {
@@ -91,9 +92,11 @@ export default connect(mapStateToProps,mapDispatchToProps) (class RegFormCompone
 
 				<form onSubmit={this.submit.bind(this)} className="formBorder">
 					<div className="container">
-						<label><b>Email</b></label>
-						<input type="text" placeholder="Enter Email" name="email" value={email} onChange={this.updateData} />
-						{errors.email && <span className="help-block">{errors.email}</span>}
+						<div className={classnames("form-group", {"has-error":errors.email})}>
+							<label><b>Email</b></label>
+							<input type="text" placeholder="Enter Email" name="email" value={email} onChange={this.updateData} />
+							{errors.email && <span className="help-block">{errors.email}</span>}
+						</div>
 
 						<label><b>Password</b></label>
 						<input type="password" placeholder="Enter Password" name="psw" value={psw} onChange={this.updateData} />
